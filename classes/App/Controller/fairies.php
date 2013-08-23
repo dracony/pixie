@@ -61,6 +61,8 @@ class Fairies extends \App\Page {
                 
 		$id = $this->request->param('id');
                 $fairy = $this->pixie->orm->get('fairy')->where('id', $id)->find();
+                if(!$fairy->loaded())
+                	throw new \Exception("Fairy with id $id not found");
                 if($this->request->method == 'POST'){
 
 
