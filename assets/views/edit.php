@@ -4,10 +4,10 @@
 	<fieldset>
 		<legend>Edit fairy</legend>
 		<label>Name</label>
-		<input name="name" type="text" placeholder="Type something…"/>
+		<input name="name" type="text" placeholder="Type something…" value="<?php echo $fairy->name; ?>"/>
 		<label>Interests</label>
 		<div>
-			<textarea name="interests"></textarea>
+			<textarea name="interests"><?php echo $fairy->interests; ?></textarea>
 		</div>
 		<button type="submit" class="btn btn-primary">Submit</button>
 	</fieldset>
